@@ -15,7 +15,7 @@ public class ClienteCalculadora {
 		QName qname = new QName("http://model.soap.com.br/", "CalculadoraSoapImplService");
 		
 		Service ws = Service.create(url, qname); // retorna objeto que pode invocar operações oferecidas pelo serviço (PortType)
-		CalculadoraSoap calc = ws.getPort(CalculadoraSoap.class);
+		CalculadoraSoap calc = ws.getPort(CalculadoraSoap.class); // recupera PortType
 		
 		System.out.println("Soma (5+1): " + calc.soma(5, 1));
 	}
